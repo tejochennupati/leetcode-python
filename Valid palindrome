@@ -1,0 +1,10 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        # Step 1: keep only alphanumeric + convert to lowercase
+        cleaned = ""
+        for ch in s:
+            if ch.isalnum():  # letters and digits only
+                cleaned += ch.lower()
+        
+        # Step 2: check if it reads same forward and backward
+        return cleaned == cleaned[::-1]
