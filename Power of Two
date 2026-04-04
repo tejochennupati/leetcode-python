@@ -2,3 +2,4 @@ class Solution(object):
     def isPowerOfTwo(self, n):
         return n > 0 and not (n & (n - 1))
         
+//  So every number is stored in binary (0s and 1s) inside the computer.
