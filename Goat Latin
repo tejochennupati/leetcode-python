@@ -1,0 +1,18 @@
+class Solution(object):
+    def toGoatLatin(self, sentence):
+        vowels = set("aeiouAEIOU")
+        transformed_words = []
+        word_count = 1  # Track word position
+        
+        for word in sentence.split():
+            if word[0] in vowels:
+                transformed = word + "ma"
+            else:
+                transformed = word[1:] + word[0] + "ma"
+            
+            
+            transformed += "a" * word_count
+            transformed_words.append(transformed)
+            word_count += 1  # Increment for next word
+        
+        return " ".join(transformed_words)
